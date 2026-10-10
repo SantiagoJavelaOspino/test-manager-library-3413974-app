@@ -68,9 +68,9 @@ El spec está escrito para Python y para .NET, pero el reto **no** se hace en es
 
 | Capa | Tecnología del reto |
 |---|---|
-| Frontend | React |
+| Frontend | React 18 |
 | Backend | PHP (arquitectura hexagonal, sin Laravel) |
-| BD | PostgreSQL 18 |
+| BD | PostgreSQL 16+ |
 
 Lo que el spec define sobre el negocio —historias, criterios de aceptación, reglas, contrato de la API, modelo de datos— se respeta. Lo que define sobre la tecnología se traduce a React y PHP nativo.
 
