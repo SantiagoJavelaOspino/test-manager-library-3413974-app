@@ -3,7 +3,87 @@
 > **Prueba técnica · Ficha ADSO 3413974**
 > Horario: de **9:15 a. m. a 3:00 p. m.** (15:00). Después, **feria de presentación** de cada proyecto.
 
-Este repositorio es el **frontend** de *Manager Library*, en **React**. **Empieza vacío a propósito**: se construye en el fork de cada aprendiz.
+Aplicación **frontend** de *Manager Library* — React 18 + Vite 5.  
+Implementación SDD completa sobre el stack PHP + PostgreSQL.
+
+## Inicio rápido
+
+### Requisitos
+- Node.js 18+
+- API corriendo en `http://localhost:8000` (ver repositorio `api`)
+
+### Instalar dependencias
+```bash
+npm install
+```
+
+### Modo desarrollo
+```bash
+npm run dev
+```
+Abre [http://localhost:5173](http://localhost:5173).
+
+### Build producción
+```bash
+npm run build
+# Archivos en dist/
+```
+
+## Variables de entorno
+
+Crea `.env.local` para sobreescribir la URL de la API:
+```
+VITE_API_URL=http://localhost:8000/api/v1
+```
+
+## Credenciales por defecto
+| Campo | Valor |
+|---|---|
+| Usuario | `admin` |
+| Contraseña | `admin123` |
+
+## Funcionalidades implementadas
+
+| Módulo | Descripción |
+|---|---|
+| Login / Logout | Autenticación JWT |
+| Catálogo | Listado, búsqueda y filtro por categoría |
+| Alta de libro | Formulario con ISBN, categoría, portada |
+| Préstamo | Carrito multi-libro → registro de préstamo |
+| Socios | Listado y alta |
+| Préstamos activos | Vista y devolución por ítem |
+| Vencidos | Préstamos con `due_at` en el pasado |
+| Reporte | Libros más prestados |
+| Alta de bibliotecario | Solo para rol `admin` |
+
+## Stack
+- React 18 (SPA sin router externo)
+- Vite 5
+- Tailwind CSS (CDN)
+- Fetch API nativa
+
+## El reto se desarrolla con React y PHP
+
+El spec está escrito para Python y para .NET, pero el reto **no** se hace en esos lenguajes:
+
+| Capa | Tecnología del reto |
+|---|---|
+| Frontend | React |
+| Backend | PHP (arquitectura hexagonal, sin Laravel) |
+| BD | PostgreSQL 18 |
+
+Lo que el spec define sobre el negocio —historias, criterios de aceptación, reglas, contrato de la API, modelo de datos— se respeta. Lo que define sobre la tecnología se traduce a React y PHP nativo.
+
+## Los seis repositorios
+
+| Repositorio | Qué va ahí |
+|---|---|
+| [`test-manager-library-3413974-docs`](https://github.com/code-sena/test-manager-library-3413974-docs) | El spec: `spec-python/` y `spec-.net/` |
+| [`test-manager-library-3413974-api`](https://github.com/code-sena/test-manager-library-3413974-api) | Backend en PHP (arquitectura hexagonal) |
+| [`test-manager-library-3413974-app`](https://github.com/code-sena/test-manager-library-3413974-app) | Frontend en React |
+| [`test-manager-library-3413974-page`](https://github.com/code-sena/test-manager-library-3413974-page) | Sitio público estático de presentación |
+| [`test-manager-library-3413974-infra`](https://github.com/code-sena/test-manager-library-3413974-infra) | Contenedores, red, volúmenes |
+| [`test-manager-library-3413974-tool`](https://github.com/code-sena/test-manager-library-3413974-tool) | Sembrador de datos de demostración |
 
 ## Instrucciones
 
